@@ -1,3 +1,5 @@
+import os 
+
 palavra_secreta = 'toalha'
 letras_acertadas = ['_'] * len(palavra_secreta)
 tentativas = 9 
@@ -27,7 +29,8 @@ while tentativas > 0 :
         print ('Você errou! Tente novamente! ')
         print (f'Você ainda tem {tentativas} tentativas. ')
 
-    if "_" not in letras_acertadas : 
+    if "_" not in letras_acertadas :
+        os.system ('cls') 
         print (f'Você ganhou! A palavra era {palavra_secreta}  ')
         break
    
