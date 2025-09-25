@@ -1,4 +1,4 @@
-palavra_secreta = 'toalha.'
+palavra_secreta = 'toalha'
 letras_acertadas = ['_'] * len(palavra_secreta)
 tentativas = 9 
 
@@ -8,10 +8,12 @@ palavra_mostrada = ' '
 
 while tentativas > 0 : 
 
-    print('Adivinhe a palavra: ' " ".join(letras_acertadas))
+    # CÓDIGO CORRETO:
+    print(f'Adivinhe a palavra: {" ".join(letras_acertadas)}')
     print (f'Você ainda tem {tentativas} tentativas. ')
 
-    chute = input('Qual letra deseja chutar ? ').lower()
+
+    chute = input('Qual letra deseja chutar ? ')
 
     if chute in palavra_secreta :  
         print ('Você acertou! ')
@@ -28,6 +30,7 @@ while tentativas > 0 :
     if "_" not in letras_acertadas : 
         print (f'Você ganhou! A palavra era {palavra_secreta}  ')
         break
+   
 
     
 
